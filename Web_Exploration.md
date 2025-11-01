@@ -71,3 +71,28 @@ I had already done a similar challenge in citadel CTF before so was aware how to
 Gemini AI (for faster method than my hit and trial)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#3. Web Gauntlet 
+To beat the filters
+
+##Solution
+
+Intially solving a similiar challenge i knew I had to somehow bypass banned words and give the alternate to bypass using sql injection. I didn't knew password but I knew the common sql injection `admin' --` to comment out  the password. 
+Now  that commenting option is blocked I used another common `admin' /*` to bypass it as it is comments and conveys to take evrything from first part and nothing from second ignoring password.
+the same bypass can be used for round 3. Now I had to refer some resources for understanding more bypasses.Since admin is block I understood had to use some kind of concatenation.
+`ad'||'min'/*`- to bypass both round 4 and 5. `||` concats admin while `/*` takes care of commenting part.
+
+##FLag:
+picoCTF{y0u_m4d3_1t_a8b2e1c97d4f0a631e8c9b7d5f2a4g0h}
+
+##Learnings: 
+I learnt what sql injection is all about and idfferent ways to bypass it.
+I also learnt commands like `admin' --`, `admin' /*` , `ad'||'min'/*` their purpose and how they could had been used alternatives to crack the password
+
+##Notes
+none
+
+## References
+https://portswigger.net/web-security/sql-injection/cheat-sheet
+
+-----------------------------------------------------------------------------
