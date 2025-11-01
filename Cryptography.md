@@ -1,4 +1,4 @@
-# 1. Abuse the Oracle
+# 1. RSA Oracle
 
 We are given two encrypted files, `password (1).enc` and `secret (1).enc`. We are also provided with a remote oracle service that can encrypt or decrypt data. The oracle's one rule is that it will not decrypt the specific ciphertext found in `password (1).enc`. The goal is to find a way to get the plaintext of the password, and then use that password to decrypt the `secret (1).enc` file to find the flag.
 
